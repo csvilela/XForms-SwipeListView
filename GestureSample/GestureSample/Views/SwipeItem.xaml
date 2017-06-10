@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestureSample.Views.SwipeItem"
+             xmlns:gestures="clr-namespace:MR.Gestures;assembly=MR.Gestures">
+  <ContentView.Content>
+      <gestures:Grid x:Name="OuterGrid" RowSpacing="0" ColumnSpacing="0">
+          <gestures:Grid RowSpacing="0" ColumnSpacing="0" x:Name="ActionItemsGrid">
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <StackLayout x:Name="ActionItemsLayout" Orientation="Horizontal" Grid.Column="1" Spacing="0"/>
+          </gestures:Grid>
+          <gestures:Grid ColumnSpacing="0" RowSpacing="0" x:Name="MainContentGrid"/>
+      </gestures:Grid>
+    </ContentView.Content>
+</ContentView>

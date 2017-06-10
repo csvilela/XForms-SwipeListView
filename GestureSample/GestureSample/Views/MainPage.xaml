@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestureSample.Views.MainPage"
+             xmlns:gestures="clr-namespace:MR.Gestures;assembly=MR.Gestures"
+             xmlns:views="clr-namespace:GestureSample.Views;assembly=GestureSample">
+
+    <views:SwipeList x:Name="MainSwipeList">
+        <views:SwipeList.MainList>
+            <gestures:ListView Panning="MainListView_OnPanning" x:Name="MainListView" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <views:SwipeItem>
+                                <views:SwipeItem.MainContent>
+                                    <gestures:Grid Down="ListItem_OnDown" BackgroundColor="Aqua">
+                                        <Label Text="{Binding Text}" />
+                                    </gestures:Grid>
+                                </views:SwipeItem.MainContent>
+                                <views:SwipeItem.ActionItems>
+                                    <views:SwipeActionItem Text="Dismiss" ItemColor="Red"/>
+                                    <views:SwipeActionItem Text="Repeat" ItemColor="Green"/>
+                                </views:SwipeItem.ActionItems>
+                            </views:SwipeItem>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </gestures:ListView>
+        </views:SwipeList.MainList>
+    </views:SwipeList>
+    <!--<ListView RowHeight="100" x:Name="TestListView" ItemSelected="TestListView_OnItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Text}" />
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>-->
+</ContentPage>
