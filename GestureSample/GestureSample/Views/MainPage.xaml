@@ -8,13 +8,13 @@
 
     <views:SwipeList x:Name="MainSwipeList">
         <views:SwipeList.MainList>
-            <gestures:ListView Panning="MainListView_OnPanning" x:Name="MainListView" RowHeight="100">
+            <gestures:ListView x:Name="MainListView" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <views:SwipeItem>
+                            <views:SwipeItem Down="ListItem_OnDown">
                                 <views:SwipeItem.MainContent>
-                                    <gestures:Grid Down="ListItem_OnDown" BackgroundColor="Aqua">
+                                    <gestures:Grid BackgroundColor="Aqua">
                                         <Label Text="{Binding Text}" />
                                     </gestures:Grid>
                                 </views:SwipeItem.MainContent>

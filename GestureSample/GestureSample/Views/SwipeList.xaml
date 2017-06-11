@@ -4,6 +4,6 @@
              x:Class="GestureSample.Views.SwipeList"
              xmlns:gestures="clr-namespace:MR.Gestures;assembly=MR.Gestures">
     <ContentView.Content>
-        <StackLayout x:Name="MainContent"/>
+        <gestures:StackLayout x:Name="MainContent" Panning="OnPanning" Up="OnUp"/>
     </ContentView.Content>
 </ContentView>

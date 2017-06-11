@@ -31,14 +31,9 @@ namespace GestureSample.Views
 	        this.Items.Add(new Model("Item 6"));
         }
 
-	    private void MainListView_OnPanning(object sender, PanEventArgs e)
-	    {
-	        this.MainSwipeList.OnListViewPanning(e);
-	    }
-
 	    private void ListItem_OnDown(object sender, DownUpEventArgs e)
 	    {
-	        this.MainSwipeList.OnListItemDown(e);
+	        this.MainSwipeList.OnItemDown(e);
 	    }
 	}
 
