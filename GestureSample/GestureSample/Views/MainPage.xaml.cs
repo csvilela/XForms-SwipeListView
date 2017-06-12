@@ -33,7 +33,7 @@ namespace GestureSample.Views
 
 	    private void ListItem_OnDown(object sender, DownUpEventArgs e)
 	    {
-	        this.MainSwipeList.OnItemDown(e);
+	        this.MainSwipeList.OnItemDown(e.Sender.FindParent<SwipeItem>(), e);
 	    }
 	}
 

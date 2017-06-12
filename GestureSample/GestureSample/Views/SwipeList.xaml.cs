@@ -47,9 +47,9 @@ namespace GestureSample.Views
             this.selectedControl.TranslationX += e.DeltaDistance.X;
         }
 
-        public void OnItemDown(DownUpEventArgs e)
+        public void OnItemDown(SwipeItem sender, DownUpEventArgs e)
         {
-            this.selectedControl = (SwipeItem)e.Sender;
+            this.selectedControl = sender;
         }
 
         private void OnUp(object sender, DownUpEventArgs e)

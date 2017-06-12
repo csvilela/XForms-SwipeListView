@@ -12,9 +12,9 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <views:SwipeItem Down="ListItem_OnDown">
+                            <views:SwipeItem >
                                 <views:SwipeItem.MainContent>
-                                    <gestures:Grid BackgroundColor="Aqua">
+                                    <gestures:Grid Down="ListItem_OnDown" BackgroundColor="Aqua">
                                         <Label Text="{Binding Text}" />
                                     </gestures:Grid>
                                 </views:SwipeItem.MainContent>
